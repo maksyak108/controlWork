@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Search</title>
+</head>
+<body>
+<h1>Weather Search</h1>
+<form action="/weather" method="get">
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city">
+  <button type="submit">Search</button>
+</form>
+<br>
+<div>
+  <h2>Results</h2>
+  <p th:text="${weather.description}"></p>
+  <p th:text="'Temperature: ' + ${weather.temperature} + ' °C'"></p>
+  <p th:text="'Humidity: ' + ${weather.humidity} + '%'"></p>
+</div>
+</body>
+</html>

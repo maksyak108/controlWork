@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search History</title>
+</head>
+<body>
+<h1>Search History</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>City</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="request : ${history}">
+    <td th:text="${#temporal.format(request.date, 'dd/MM/yyyy HH:mm:ss')}"></td>
+    <td th:text="${request.city}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
